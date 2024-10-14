@@ -4,6 +4,7 @@
   "description": "file sharing app",
   "main": "index.js",
   "scripts": {
+    "build": "npm install",
     "start": "node index.js",
     "serve": "nodemon index.js"
   },
