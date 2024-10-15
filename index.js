@@ -9,7 +9,14 @@ const corsOptions = {
   // ['http://localhost:3000', 'http://localhost:5000', 'http://localhost:3300']
 };
 
-app.use(cors(corsOptions));
+app.use(
+  cors({
+    origin: "https://aftabkhan707.github.io", // Add your frontend URL here
+  })
+);
+app.options('*', cors()); // Allow preflight requests for all routes
+
+// app.use(cors(corsOptions));
 
 app.use(express.static("public"));
 const connectDB = require("./config/db");
